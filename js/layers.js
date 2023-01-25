@@ -33,6 +33,16 @@ addLayer("p", {
             description: "Double your point gain.",
             cost: new Decimal(1),
         },
+        12: {
+            title: "Prestigious Points",
+            description: "Increases your point gain based on Prestige Points.",
+            cost: new Decimal(2),
+            effect() {
+                return player[this.layer].points.add(1).pow(0.5)
+            },
+            effectDisplay() { return FormData(upgradeEffect(this.layer, this.id))+"x"}
+        },
+        
     },
 
 })
