@@ -44,8 +44,8 @@ addLayer("p", {
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x"}
         },  
         13: {
-            title: "Prestigious Points",
-            description: "Increases your point gain based on Prestige Points.",
+            title: "Points^2",
+            description: "Increases your point gain based on Points.",
             cost: new Decimal(5),
             effect() {
                 return player.points.add(1).pow(0.15)
